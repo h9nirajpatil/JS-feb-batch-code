@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch function</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            width: 40%;
+            height: 150px;
+            background-color: aquamarine;
+            border: 2.5px solid white;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .content {
+            color: salmon;
+            font-size: 20px;
+            font-weight: 900;
+            margin: 0 1%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .author {
+            color: slateblue;
+            font-size: 18px;
+            font-weight: 900;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>how to web fetch api data</h1>
+    <p>The Fetch API interface allows web browser to make HTTP requests to web servers.</p>
+
+    <h2>Random Quotes generator</h2>
+    <div class="box">
+        <p id="quote"></p>
+    </div>
+
+    <script>
+        async function quetoe() {
+            let response = await fetch('https://api.quotable.io/random')
+            let data = await response.json();
+            document.getElementById('quote').innerHTML = `<span class="content">` + data.content + `</span>` + `-` + `<span class="author">` + data.author + `</span>`;
+        }
+        setInterval(quetoe, 2000) 
+    </script>
+</body>
+
+</html>

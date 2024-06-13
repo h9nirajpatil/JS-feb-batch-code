@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onfocus</title>
+</head>
+
+<body>
+    <h2>The onfocus Attributes</h2>
+    Enter your name : <input type="text"  onfocus="myFunction(this)">
+    <p>When the input field get focus , a function is triggered which changes the background color</p>
+    <script>
+        function myFunction(x) {
+            x.style.background = "lightblue";
+        }
+    </script>
+</body>
+
+</html>

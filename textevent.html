@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events</title>
+</head>
+
+<body>
+    <h1>You can add events of different types to the same element:</h1>
+    <p>JavaScript addEventListener()</p>
+    <p>This example uses the addEventListener() method to add many events on the same button.</p>
+
+
+    <button type="submit" id="myBtn">Click Me!</button>
+
+    <p id="demo"></p>
+
+    <script>
+        var x = document.getElementById("myBtn");
+        x.addEventListener("mouseover", firstFuction);
+        x.addEventListener("click", seconFunction);
+        x.addEventListener("mouseout", thirdFunction);
+
+        function firstFuction() {
+            document.getElementById("demo").innerHTML += "Moused over! <br>";
+        }
+
+        function seconFunction() {
+            document.getElementById("demo").innerHTML += "Clicked! <br>"
+        }
+
+        function thirdFunction() {
+            document.getElementById("demo").innerHTML += "Moused out! <br>"
+        }
+    </script>
+</body>
+
+</html>

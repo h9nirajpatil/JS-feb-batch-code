@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "-": "^0.0.1",
+    "node-localstorage": "^3.0.5",
+    "save": "^2.9.0"
+  }
+}

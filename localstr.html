@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lclstr</title>
+</head>
+
+<body>
+    <input type="text" id="textInput" placeholder="Enter Username">
+    <button onclick="savedata()" type="submit">Save</button>
+    <button type="submit" onclick="cleardata()">clear</button>
+
+    <script>
+        function savedata() {
+            localStorage.setItem("savedata", textInput.value)
+        }
+        function cleardata() {
+            localStorage.removeItem('savedata')
+        }
+        textInput.value = localStorage.getItem('savedata') || ' ';
+    </script>
+</body>
+
+</html>

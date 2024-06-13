@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Columns with CSS Grid</title>
+    <style>
+        .grid-container {
+            max-width: 1400px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-gap: 2rem;
+            margin-left: 3%;
+
+        }
+
+        .grid-item {
+            background-color: green;
+            height: 200px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            animation: grow 1s ease-in-out;
+            animation-fill-mode: forwards;
+
+        }
+
+        @keyframes grow {
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1400px) {
+            .grid-container {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                margin-left: 0%;
+
+            }
+        }
+
+        @media (min-width: 53px) and (max-width: 768px) {
+            .grid-container {
+                margin-left: 0%;
+            }
+        }
+
+        /* CSS styles */
+        .button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Keyframes for shaking animation */
+        @keyframes shake {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            25% {
+                transform: translate(-5px, -5px);
+            }
+
+            50% {
+                transform: translate(5px, 5px);
+            }
+
+            75% {
+                transform: translate(-5px, 5px);
+            }
+
+            100% {
+                transform: translate(5px, -5px);
+            }
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+            animation: shake 0.5s ease infinite;
+            /* Apply the animation on hover */
+        }
+
+        /* CSS styles */
+        .loader {
+            border: 8px solid #f3f3f3;
+            /* Light grey */
+            border-top: 8px solid #3498db;
+            /* Blue */
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 2s linear infinite;
+            /* Apply the animation */
+        }
+
+        /* Keyframes for clockwise spinning animation */
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+
+
+
+        .animate-text {
+            animation: move-down 2s linear infinite;
+        }
+
+        @keyframes move-down {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(20px);
+            }
+        }
+    </style>
+
+<body>
+    <!-- <div class="grid-container">
+        <div class="grid-item">Item 1</div>
+        <div class="grid-item">Item 2</div>
+        <div class="grid-item">Item 3</div>
+        <div class="grid-item">Item 4</div>
+        <div class="grid-item">Item 5</div>
+        <div class="grid-item">Item 6</div>
+        <div class="grid-item">Item 7</div>
+        <div class="grid-item">Item 8</div>
+        <div class="grid-item">Item 9</div>
+        <div class="grid-item">Item 10</div>
+        <div class="grid-item">Item 11</div>
+        <div class="grid-item">Item 12</div>
+    </div>
+  
+    <button class="button">Hover over me</button>
+
+  
+    <div class="loader"></div> -->
+
+
+    <p className="animate-text">This is an animated text.</p>
+
+</body>
+
+</html>
+
+
+<style></style>

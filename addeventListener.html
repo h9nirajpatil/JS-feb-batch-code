@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addEventListener</title>
+</head>
+
+<body>
+    <!-- 
+        The addEventListener() method attaches an event handler to the specified element.
+        The addEventListener() method attaches an event handler to an element without overwriting existing event handlers.
+        You can add many event handlers to one element.
+        You can add many event handlers of the same type to one element, i.e two "click" events.
+        You can add event listeners to any DOM object not only HTML elements. i.e the window object.
+        The addEventListener() method makes it easier to control how the event reacts to bubbling.
+        When using the addEventListener() method, the JavaScript is separated from the HTML markup, for better readability and allows you to add event listeners even when you do not control the HTML markup.
+        You can easily remove an event listener by using the removeEventListener() method.
+        Syntax
+        element.addEventListener(event, function, useCapture);
+     -->
+
+    <!-- <h2>JS addEventListener</h2>
+    <p></p>
+    <button id="myBtn">Click Me</button>
+    <script>
+        document.getElementById("myBtn").addEventListener("click", myFunction)
+
+        function myFunction() {
+            alert("hello Ramesh!")
+        }
+    </script> -->
+
+    <h2>multiple events</h2>
+    <p>This example uses the addEventListener() method to add two click events to the same button.</p>
+    <button id="myBtn">Try it</button>
+    <script>
+        var x = document.getElementById("myBtn");
+        x.addEventListener("click", myFunction);
+        x.addEventListener("click", someotherFunction);
+
+        function myFunction() {
+            alert("Hello World!")
+        }
+
+        function someotherFunction() {
+            alert("This function was also excecuted.")
+        }
+    </script>
+</body>
+
+</html>

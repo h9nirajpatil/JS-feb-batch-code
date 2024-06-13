@@ -1,0 +1,10 @@
+{
+  "name": "vijay",
+  "age": 24,
+  "is_student": true,
+  "p_lang": ["c", "c++", "python"],
+  "address": {
+    "city": "Banglore",
+    "state": "Karantaka"
+  }
+}

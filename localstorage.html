@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>local storage example with event</title>
+</head>
+
+<body>
+    <h2>Local Storage Example</h2>
+    <input type="text" name="" id="textInput" placeholder="Enter text"><br><br>
+    <p id="note"></p>
+    <button onclick="saveText()">Save Text</button>
+    <button onclick="clearStorage()">Clear Storage</button>
+    <script>
+        function saveText() {
+            //set an item local storage with key 'saveText' and values as the textinput's value.
+            localStorage.setItem('saveText', textInput.value);
+            //set the innerHTML of the note element to a success message.
+            document.getElementById("note").innerHTML = "Notification: You have successfully saved the data."
+            //set the color of the note element to green
+            document.getElementById("note").style.color = "green"
+            //set the background color of the note element to black
+            document.getElementById("note").style.background = "black"
+        }
+        function clearStorage() {
+            //remove item with key 'saveText' from local storage.
+            localStorage.removeItem('saveText');
+            // Set the innerHTML of the note element to a message indicating data removal
+            document.getElementById("note").innerHTML = "Notification: You have successfully removed the data."
+            // Set the color of the note element to red
+            document.getElementById("note").style.color = "red"
+            // Set the background color of the note element to black
+            document.getElementById("note").style.background = "black"
+        }
+        //Retrieve the value of 'saveText' from local strage & set it as the value of the text input, if it exists.
+        textInput.value = localStorage.getItem('saveText') || ' ';
+    </script>
+</body>
+
+</html>
